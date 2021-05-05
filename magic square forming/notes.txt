@@ -1,0 +1,11 @@
+M # Starting square
+rotate(M) # rotate clockwise 90 degrees
+rotate(rotate(M)) # rotate clockwise 180 degrees
+rotate(rotate(rotate(M))) # rotate clockwise 270 degrees
+refect(M,dim=rows) # reflect along row dimension
+reflect(M,dim=cols) # reflect along column dimension
+reflect(M,dim=diag) # reflection along main diagonal
+transpose(M) # reflect along off-diagonal
+
+
+

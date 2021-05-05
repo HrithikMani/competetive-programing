@@ -1,0 +1,55 @@
+import java.util.ArrayList;
+
+/*
+A*1
+B*C*3*2
+D*E*F*6*5*4
+G*H*I*J*10*9*8*7
+K*L*M*N*O*15*14*13*12*11
+*/
+
+class First{
+  public static void main(String args[]){
+  String s = "123";
+  String ans = "";
+  fun(s,ans);
+}
+public static void fun(String s,String ans){
+  if(s.length() == 0){
+    System.out.println(ans);
+    return;
+  }
+  
+  
+  else if(s.length() == 1){
+    char ch = s.charAt(0);;
+    if(ch == '0'){
+      return;
+    }else{
+      int chv = ch -'0';
+      char code = (char)('a' + chv -1);
+      ans =ans +code;
+      System.out.println(ans);
+    }
+  }
+  
+  else{
+    char ch = s.charAt(0);
+    String rq = s.substring(1);
+    if(ch == '0'){
+      return;
+    }else{
+      int chv = ch -'0';
+      char code = (char)('a' + chv -1);
+        fun(rq,ans+code);
+    }
+    String ch2 = s.substring(0,2);
+    String roq=s.substring(2);
+    int x = Integer.parseInt(ch2);
+    if(x<26){
+      char code = (char)('a' + x -1);
+      fun(roq,ans+code);
+    }
+  }
+}
+}
